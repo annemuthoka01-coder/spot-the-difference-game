@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spot the Difference — Park, Sea and Savanna</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>Spot the Difference</h1>
+    <p class="tagline">Two pictures, a handful of edits. Tap each one you find.</p>
+  </header>
+  <main>
+    <section id="menu-screen">
+      <h2>Choose a hunt</h2>
+      <div id="level-cards" class="cards"></div>
+      <label class="relaxed-toggle">
+        <input type="checkbox" id="relaxed"> Relaxed mode (no timer)
+      </label>
+      <p class="menu-note">Find every change before the clock runs out — or take your time in relaxed mode.</p>
+    </section>
+    <section id="game-screen" hidden>
+      <div class="hud">
+        <span id="level-name"></span>
+        <span class="hud-stats"><span id="found-count">0 found</span> · <strong id="remain-count"></strong></span>
+        <span class="hud-stats">Time <strong id="timer">1:30</strong></span>
+        <span class="hud-stats">Score <strong id="score">0</strong></span>
+        <div class="hud-buttons">
+          <button id="hint-btn" type="button">Hint (3)</button>
+          <button id="sound-btn" type="button">Sound on</button>
+          <button id="menu-btn" type="button">Menu</button>
+        </div>
+      </div>
+      <p id="message" class="message">Find every change.</p>
+      <div class="panels">
+        <figure class="panel">
+          <figcaption>Original</figcaption>
+          <div id="panel-original" class="art"></div>
+        </figure>
+        <figure class="panel">
+          <figcaption>Changed</figcaption>
+          <div id="panel-changed" class="art"></div>
+        </figure>
+      </div>
+      <div id="end-banner" class="banner" hidden>
+        <h2 id="end-title"></h2>
+        <p id="end-text"></p>
+        <div class="banner-buttons">
+          <button id="again-btn" type="button">Play again</button>
+          <button id="next-btn" type="button">Next hunt</button>
+          <button id="banner-menu-btn" type="button">Menu</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="scoring">
+    100 points a find · 5 points a second left · a hint costs 50 · a miss costs 3 seconds
+  </footer>
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
